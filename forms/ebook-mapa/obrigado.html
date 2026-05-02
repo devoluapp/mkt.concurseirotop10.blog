@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quase lá! Verifique seu e-mail</title>
     <style>
+
+
+            
+        
+
         :root {
-            --primary-color: #1a365d; 
-            --accent-color: #f6ad55;  
-            --success-color: #48bb78;
+            --primary-color: #306263; 
+            --accent-color: var(--primary-color);  /* #47bea0 */
             --bg-gradient: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            --success-color: var(--accent-color);
         }
 
         body {
@@ -24,6 +29,9 @@
             padding: 20px;
         }
 
+        .cor-primary {
+            color: var(--primary-color)
+        }
         .container {
             background: white;
             padding: 40px;
@@ -34,10 +42,11 @@
             text-align: center;
         }
 
+
         .check-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--success-color);
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -70,7 +79,7 @@
 
         .instructions-box h3 {
             margin-top: 0;
-            color: #dd6b20;
+            color: var(--primary-color);
             font-size: 1rem;
             display: flex;
             align-items: center;
@@ -110,29 +119,35 @@
 
 <div class="container">
     <div class="check-icon">✓</div>
-    <h1>Inscrição Confirmada!</h1>
-    <p>Parabéns por dar esse passo rumo à sua aprovação. O seu <strong>Mapa do Concurseiro Top 10</strong> já foi enviado para o seu e-mail.</p>
+    <h1>Já está chegando!</h1>
+    <p>O seu <strong class="cor-primary">Mapa do Concurseiro Top 10</strong> já está a caminho do seu 
+        e-mail.</p>
 
     <div class="instructions-box">
-        <h3>⚠️ Instruções Importantes:</h3>
+        <h3>Importante:</h3>
         
         <div class="instruction-item">
             <span>1.</span>
-            <div>Verifique sua <strong>Caixa de Entrada</strong> agora mesmo. O e-mail deve chegar em menos de 2 minutos.</div>
+            <div>Verifique sua <strong class="cor-primary">Caixa de Entrada</strong>. O e-mail deve chegar em menos de 2 minutos.</div>
         </div>
 
         <div class="instruction-item">
             <span>2.</span>
-            <div>Olhe na pasta de <strong>Spam ou Promoções</strong>. Se estiver lá, arraste o e-mail para a "Caixa de Entrada".</div>
+            <div>Olhe na pasta de <strong class="cor-primary">Spam ou Promoções</strong>. Se estiver lá, arraste o e-mail para a "Caixa de Entrada".</div>
         </div>
 
         <div class="instruction-item">
             <span>3.</span>
-            <div><strong>Adicione nosso contato</strong> (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3c0cccdd7c2d7cce3c0cccdc0d6d1d0c6cad1ccd7ccd392938dc1cfccc4">[email&#160;protected]</a>) à sua agenda para garantir que as próximas dicas e editais cheguem até você.</div>
+            <div><strong class="cor-primary">Adicione nosso contato</strong> (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3c0cccdd7c2d7cce3c0cccdc0d6d1d0c6cad1ccd7ccd392938dc1cfccc4">[email&#160;protected]</a>) à sua agenda para garantir que as próximas dicas e editais cheguem até você.</div>
         </div>
     </div>
-
-    <a href="https://concurseirotop10.blog" class="btn-home">← Voltar para o Blog</a>
+    <p>Enquanto isso, visite nosso Instagram e o nosso Blog para ter acesso a conteúdo de qualidade sobre concursos!</p>
+    
+    <a href="https://www.instagram.com/concurseirotop10.blog/" class="btn-home">
+        <img src="img/ig.png" width="36px" height="36px" /></a>
+    <a href="https://concurseirotop10.blog" class="btn-home">
+        <img src="img/blog.png" width="36px" height="36px" />
+    </a><br/>
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"8601dd9d24a64a97bcc2e7ff461a5d06","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>

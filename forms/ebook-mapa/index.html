@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root {
-            --primary-color: #1a365d; /* Azul autoridade (Jurídico) */
-            --accent-color: #f6ad55;  /* Laranja para o botão (Contraste) */
+            --primary-color: #306263; /* Azul autoridade (Jurídico) */
+            --accent-color: #47bea0;  /* Laranja para o botão (Contraste) */
             --bg-gradient: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
         }
 
@@ -33,11 +33,11 @@
         }
 
         .badge {
-            background: #c6f6d5;
-            color: #22543d;
+            background: #9ae2d0;
+            color: var(--primary-color);
             padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            /*font-size: 0.85rem;*/
             font-weight: bold;
             display: inline-block;
             margin-bottom: 15px;
@@ -46,6 +46,13 @@
         h1 {
             color: var(--primary-color);
             font-size: 1.8rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
             margin-bottom: 10px;
             line-height: 1.2;
         }
@@ -86,7 +93,7 @@
 
         button {
             width: 100%;
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             color: white;
             padding: 15px;
             border: none;
@@ -99,7 +106,7 @@
         }
 
         button:hover {
-            background-color: #ed8936;
+            background-color: #479192;
             transform: translateY(-2px);
         }
 
@@ -119,34 +126,42 @@
             color: var(--primary-color);
             font-weight: bold;
         }
+        .cor-primary {
+            color: var(--primary-color)
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <span class="badge">Método Validado: 6º Lugar TRT-2</span>
-    <h1>O Mapa da Aprovação</h1>
-    <p class="description">Descubra como saí do zero até o 6º lugar para Analista do TRT2. Baixe o guia prático com meu método de estudo.</p>
+    <!-- <span class="badge">Método Validado: 6º Lugar TRT-2</span> -->
+    <img src="img/logo.png" width="80px" height="80px"/>
+    <h1>Informe seu e-mail.</h1>
+    <h2>É lá que você vai receber o <u>Mapa do concurseiro Top 10!</u></h2>
+    <p class="description">Caso não receba em até alguns minutos, <b class="cor-primary">verifique sua caixa de spam</b>. 
+        Se ainda não encontrar, fale conosco através do email <b><i class="cor-primary"> contato@concurseirotop10.blog</i></b> que te mandamos por lá.</p>
 
     <form id="leadForm">
         <div class="form-group">
-            <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+            <!--label for="nome">Nome Completo</label-->
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
         </div>
         
         <div class="form-group">
-            <label for="email">E-mail Principal</label>
-            <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+            <!--label for="email">E-mail Principal</label-->
+            <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
         </div>
         
         <input type="hidden" name="origem" value="concurseirotop10_blog">
         
-        <button type="submit" id="submitBtn">QUERO O EBOOK GRATUITO</button>
+        <button type="submit" id="submitBtn">RECEBER O MAPA NO MEU EMAIL</button>
         <div id="loading" class="loading-spinner">Enviando seu guia...</div>
     </form>
 
-    <p class="footer-text">🔒 Seus dados estão seguros e nunca enviaremos spam.</p>
+    <p class="footer-text">🛡️ Ao enviar, você aceita receber informações da Concurseiro Top 10 por e-mail.</p>
+    <p class="footer-text">Respeitamos sua privacidade. Você poderá cancelar o recebimento a qualquer momento!</p>
 </div>
+
 
 <script>
 document.getElementById('leadForm').addEventListener('submit', async (e) => {
